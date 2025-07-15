@@ -1,0 +1,21 @@
+{
+  "name": "presentation-git-slides",
+  "version": "1.0.0",
+  "description": "Présentation git à l'aide de reveal.js",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve"
+  },
+  "keywords": [
+    "git",
+    "reveal.js"
+  ],
+  "author": "Ferrier Benjamin",
+  "license": "ISC",
+  "dependencies": {
+    "reveal.js": "^5.2.1"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

@@ -1,0 +1,15 @@
+# Slides
+Les slides ont été créés à l'aide de [reveal.js](https://revealjs.com/) dont une présentation rapide est disponible [sur le site de Grafikart](https://grafikart.fr/tutoriels/reveal-js-presentation-2109).
+
+## Afficher la présentation
+1. [Installer node.js](https://nodejs.org/fr/download)
+2. Ouvrir un terminal
+3. Installer le nécessaire de développement : `npm install`
+4. Lancer le serveur : `npm run start`
+5. Une URL s'affiche dans la console (http://localhost:3000), l'ouvrir dans un navigateur.
+6. Enjoy 🙂
+
+## Naiviguer dans la présentation
+- Utiliser les flèches en bas à droite ou celle du clavier pour passer de slide en slide
+- Appuyer sur "ECHAP" pour un accès rapide à une slide
+- Les numéros de slide sont dans l'URL

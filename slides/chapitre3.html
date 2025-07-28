@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/white.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <section>
+                        <h1>Rechercher dans l'historique</h1>
+                    </section>
+                    <section>
+                        git log --oneline --author "author name" -- 'file path"
+	-S "chaine a rechercher"
+	-G 'regex'
+ -p
+git log --name-only
+                        git log --oneline HEAD..origin
+                    </section>
+                    <section>
+                        <h1>git bisect</h1>
+
+                        git bisect start HEAD [good commit id]
+ git bisect run dotnet test --filter "nom du test"
+ git bisect reset
+
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Réecrire l'historique</h1>
+                    </section>
+
+                    <section>
+                        <h1>git commit --amend</h1>
+                    </section>
+                    <section>
+                        <h1>git rebase</h1>
+
+                        git commit --fixup
+                        git rebase -i HEAD~
+                    </section>
+                </section>
+            </section>
+        </div>
+    </div>
+    <script type="module">
+        import Reveal from './node_modules/reveal.js/dist/reveal.esm.js'
+        import RevealNotes from "./node_modules/reveal.js/plugin/notes/notes.esm.js"
+
+        Reveal.initialize({
+            hash: true,
+            navigationMode: "linear",
+            width: 1920,
+            height: 1080,
+            plugins: [RevealNotes],
+        });
+    </script>
+
+</html>

@@ -1,0 +1,405 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/white.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/plugin/highlight/monokai.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section data-auto-animate>
+                    <h1>Utiliser GIT</h1>
+                    <h2>Ligne de commande</h2>
+
+                    <pre><code class="language-shell">> git ...</code></pre>
+
+                    <aside class="notes">
+                        - Comprendre ce qu'il se passe
+                        - stage partiel difficile
+                    </aside>
+                </section>
+                <section data-auto-animate>
+                    <h1>Utiliser GIT</h1>
+                    <h2>GUI</h2>
+                    <p>
+                        Github Desktop, Git kraken, Sourcetree, ...<br />
+                        <a href="https://git-scm.com/downloads/guis">https://git-scm.com/downloads/guis</a>
+                    </p>
+                </section>
+                <section data-auto-animate>
+                    <h1>Utiliser GIT</h1>
+                    <h2>Intégration IDE</h2>
+                    <p>
+                        Visual Studio Code, JetBrains, Visual Studio, ...
+                    </p>
+                </section>
+                <section>
+                    <h1>On va avoir besoin de </h1>
+                    <ul>
+                        <li><a href="https://git-scm.com/downloads">Git</a></li>
+                        <li><a href="https://github.com/apps/desktop">Github Desktop</a></li>
+                        <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+                        <li><a href="https://marketplace.visualstudio.com/items?itemName=huizhou.githd">Git History
+                                Diff</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>
+                        Visual Studio Code
+                    </h1>
+                </section>
+                <section>
+                    <h1>Explorateur de fichiers</h1>
+                    <ul>
+                        <li><img src="img/vscode-menu-files.PNG" /></li>
+                        <li>Menu "View" puis "Explorer"</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Rechercher de commandes</h1>
+                    <ul>
+                        <li>Menu "View" puis "Command Palette ..."</li>
+                        <li>Menu "Go" puis "Go to file..." puis ">"</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Menu extension</h1>
+                    <ul>
+                        <li><img src="img/vscode-menu-extension.PNG" /></li>
+                        <li>Menu "View" puis "Extensions"</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Menu GIT</h1>
+                    <ul>
+                        <li><img src="img/vscode-menu-git.PNG" /></li>
+                        <li>Menu "View" puis "Source Control"</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Terminal</h1>
+                    <ul>
+                        <li>Menu "View" puis "Terminal"</li>
+                        <li>Menu "Terminal" puis "New Terminal"</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h1>Activer git</h1>
+                <pre><code class="language-shell">> git init</code></pre>
+
+                <p>
+                    crée un dossier .git (working tree)
+                </p>
+            </section>
+            <section>
+                <section data-auto-animate>
+                    <h1>Modifier la configuration</h1>
+                    <pre><code class="language-powershell" data-id="code">git config</code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h1>Modifier la configuration</h1>
+                    <h2 data-id="title">de la machine</h2>
+                    <pre><code class="language-powershell" data-id="code">git config --system</code></pre>
+                    <span data-id="file">C:\Program Files\Git\mingw64\etc\gitconfig</p>
+                </section>
+                <section data-auto-animate>
+                    <h1>Modifier la configuration</h1>
+                    <h2 data-id="title">d'un projet</h2>
+                    <pre><code class="language-powershell" data-id="code">git config</code></pre>
+                    <span data-id="file">.git/config</p>
+                </section>
+                <section data-auto-animate>
+                    <h1>Modifier la configuration</h1>
+                    <h2 data-id="title">de l'utilisateur</h2>
+                    <pre><code class="language-powershell" data-id="code">git config --global</code></pre>
+                    <span data-id="file">C:\Users\Benjamin\.gitconfig</p>
+                </section>
+                <section>
+                    <h1>Recherche de configuration</h1>
+                    <ol>
+                        <li>Configuration du projet</li>
+                        <li>Configuration de l'utilisateur</li>
+                        <li>Configuration de la machine</li>
+                    </ol>
+
+                    <aside class="notes">
+                        Système d'héritage
+                    </aside>
+                </section>
+                <section data-auto-animate>
+                    <pre><code class="language-powershell" data-id="code">git config --global</code></pre>
+                </section>
+                <section data-auto-animate>
+                    <pre><code class="language-powershell" data-id="code">git config --global user.name</code></pre>
+                </section>
+                <section data-auto-animate>
+                    <pre><code class="language-powershell" data-id="code">git config --global user.name "Ferrier Benjamin"</code></pre>
+                </section>
+                <section data-auto-animate>
+                    <pre><code class="language-powershell" data-id="code">git config --global user.name "Ferrier Benjamin"</code></pre>
+                    <pre><code class="language-powershell" data-id="code2">git config --global user.email</code></pre>
+                </section>
+                <section data-auto-animate>
+                    <pre><code class="language-powershell" data-id="code">git config --global user.name "Ferrier Benjamin"</code></pre>
+                    <pre><code class="language-powershell" data-id="code2">git config --global user.email</code></pre>
+                    <pre>
+                        <code class="language-powershell">
+                            git config --global core.editor "code --wait"
+                        </code>
+                    </pre>
+                    <dl>
+                        <dt>--wait</dt>
+                        <dd>force le développeur à fermer le fichier avant de continuer</dd>
+                    </dl>
+                    <aside class="notes">
+                        En console : l'editeur utilisé
+                    </aside>
+                </section>
+                <section>
+                    <h1>A vous</h1>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Ajouter un élément à un historique existant</h1>
+                </section>
+                <section data-auto-animate>
+                    <h1 data-id="title">On fait des modification</h1>
+
+                    <pre data-id="code">
+                        <code data-trim class="language-powershell">git status</code>
+                    </pre>
+                </section>
+                <section data-auto-animate>
+                    <h1 data-id="title">On prend celles qui nous intéresses (stage)</h1>
+
+                    <pre><code class="language-powershell" data-id="code">git add "nom/chemin du fichier"</code></pre>
+                    <pre><code class="language-powershell">git add --all</code></pre>
+
+                    <p>
+                        stage partiel (vscode)
+                    </p>
+                </section>
+                <section data-auto-animate>
+                    <h1 data-id="title">On commit</h1>
+
+                    <pre>
+                        <code data-trim class="language-powershell">git commit -m "message"</code></pre>
+                    </pre>
+                </section>
+                <section>
+                    <h1>Attention aux commits !</h1>
+
+                    <ul>
+                        <li>Pas de données gigantesques</li>
+                        <li>Pas de données sensibles</li>
+                    </ul>
+                </section>
+                <section data-auto-animate>
+                    <h1>Quelle taille de commits ?</h1>
+                    <ul>
+                        <li>Trop gros: difficile à comprendre le commit</li>
+                        <li>Trop petit: difficile de comprendre l'historique</li>
+                    </ul>
+                </section>
+                <section data-auto-animate>
+                    <h1>Quelle taille de commits ?</h1>
+                    <ul>
+                        <li>Trop gros: difficile à comprendre le commit</li>
+                        <li>Trop petit: difficile de comprendre l'historique</li>
+                        <li style="margin-top: 50px;">Modification qui intéragissent ensemble</li>
+                        <li>Apporte un changement "visible"</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Afficher l'historique</h1>
+                    <pre><code data-trim class="language-powershell">git log</code></pre>
+
+                    <fieldset>
+                        <legend>Commandes du man (linux)</legend>
+                        <ul>
+                            <li>/ + N: recherche textuelle</li>
+                            <li>q: pour quitter</li>
+                        </ul>
+                    </fieldset>
+
+                    <h3>Git History Diff</h3>
+                    <pre>
+                        <code data-trim class="language-shell">
+                            > GitHd: View Entire History
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h1>Hash</h1>
+
+                    <ul>
+                        <li>Transforme du texte en une clée unique</li>
+                        <li>Si le texte change, le hash change</li>
+                        <li>Cette clée sert d'identifiant au commit</li>
+                        <li>Quel est le texte fournis par git ?</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Afficher un commit</h1>
+
+                    <pre>
+                        <code data-trim class="language-powershell">
+                            git show "hash du commit"
+                        </code>
+                    </pre>
+
+                    <h3>Git History Diff</h3>
+                    <pre>
+                        <code data-trim class="language-txt">
+                            > GitHd: Input ref
+                        </code>
+                    </pre>
+                    <pre>
+                        <code data-trim class="language-txt">
+                            > Hash du commit
+                        </code>
+                    </pre>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h1>Commit</h1>
+                    <p>Stocker dans .git/objects</p>
+                    <pre data-id="code">
+                        <code data-trim class="language-powershell">
+                            git cat-file -p "hash"
+                        </code>
+                    </pre>
+                </section>
+                <section >
+                    <h1>Et pour le second commit ?</h1>
+
+                    <p>
+                        parent ...
+                    </p>
+
+                </section>
+                <section>
+                    <ul>
+                        <li>.git\HEAD : dernier commit</li>
+                        <li>.git\logs : cache d'optimisation</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Branches</h1>
+                    <ul>
+                        <li>Pouvoir abandonner une évolution entamée</li>
+                        <li>Travailler sur plusieurs sujets en parallèle</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Branches</h1>
+                    <ol>
+                        <li>On par de la branche principal (master ou main)</li>
+                        <li>On crée une nouvelle branche</li>
+                        <li>On se met dessus</li>
+                        <li>Les nouveaux commit sont uniquement sur notre branche</li>
+                        <li>Qunad on a terminé, on récupère nouveauté de la branche principal</li>
+                        <li>Puis on ajoute les nouveaux commits sur la branche principal</li>
+                    </ol>
+                </section>
+                <section>
+                    <h1>Créer une branche<</h1>
+
+                    <pre>
+                        <code data-trim class="language-powershell">
+                            git branch nom_branch
+                        </code>
+                    </pre>
+
+                    Ajout dans .git\refs\heads\nom_branch
+                </section>
+                <section>
+                    <h1>Changer de branche</h1>
+                    <pre>
+                        <code data-trim class="language-powershell">
+                            git switch nom_branch
+                        </code>
+                    </pre>
+
+                    Modification .git\HEAD
+                </section>
+                <section>
+                    <h1>Lister</h1>
+                    <pre>
+                        <code data-trim class="language-powershell">
+                            git branch
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h1>Supprimer</h1>
+                    <pre>
+                        <code data-trim class="language-powershell">
+                            git branch -d nom_branch
+                        </code>
+                    </pre>
+                </section>
+                
+                <section>
+                    <h1>Récupère les nouveauté de master</h1>
+
+                    <pre>
+                        <code data-trim class="language-powershell">
+                            git rebase master nom_branch
+                        </code>
+                    </pre>
+                    <ol>
+                        <li>Créer une nouvelle branche de travail depuis master</li>
+                        <li>Ajoute les nouveaux commits de nom_branch sur la branche de travail</li>
+                        <li>Je modifie les commit en conflit</li>
+                        <li>Supprimer nom_branch</li>
+                        <li>Renommer la branche de travail en nom_branch</li>
+                    </ol>
+                </section>
+                <section>
+                    <h1>Ajouter nos commit à master</h1>
+
+                    <pre>
+                        <code data-trim class="language-powershell">
+                            git switch master
+                            git merge nom_branch
+                        </code>
+                    </pre>
+
+                    <ol>
+                        <li>Je me met sur master</li>
+                        <li>Fast Forward: J'ajoute les commit de nom_branch que je ne connais pas à la fin</li>
+                    </ol>
+                </section>
+            </section>
+        </div>
+    </div>
+    <script type="module">
+        import Reveal from './node_modules/reveal.js/dist/reveal.esm.js'
+        import RevealNotes from "./node_modules/reveal.js/plugin/notes/notes.esm.js"
+        import RevealHighlight from "./node_modules/reveal.js/plugin/highlight/highlight.esm.js"
+
+        Reveal.initialize({
+            hash: true,
+            navigationMode: "linear",
+            width: 1920,
+            height: 1080,
+            plugins: [RevealNotes, RevealHighlight],
+        });
+    </script>
+
+</html>

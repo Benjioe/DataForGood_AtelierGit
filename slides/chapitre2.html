@@ -1,0 +1,237 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/white.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section data-auto-animate>
+                    <h1>Github ?</h1>
+
+                    <h2>Dépot git</h2>
+                </section>
+                <section data-auto-animate>
+                    <h1>Github ?</h1>
+
+                    <h2>Forge logiciel</h2>
+                    <ul>
+                        <li>Gestion de tickets (bug, nouvelles fonctionnalitées ...)</li>
+                        <li>Outils de gestion de projets</li>
+                        <li>...</li>
+                    </ul>
+                </section>
+                <section data-auto-animate>
+                    <h1>Github ?</h1>
+
+                    <h2>Lié à l'open source</h2>
+                    <ul>
+                        <li>Rachat par Microsoft</li>
+                        <li>GitLab, https://bitbucket.org/ (Jira) ...</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h1>OpenSource Flow</h1>
+                <p>
+                    Comment organiser le travail en équipe<br /><br />
+
+                    Pas le seul : <a href="https://danielkummer.github.io/git-flow-cheatsheet/index.fr_FR.html">Git
+                        Flow</a>, Trunk base developpement ...
+                </p>
+            </section>
+            <section>
+                <section data-auto-animate>
+                    <ul>
+                        <li><img src="img/benjamin.png" width="202px" heigth="186px" /></li>
+                        <li>Benjamin</li>
+                        <li style="font-weight: bold">Contributeur.ice</li>
+                        <li>A du temps en ce moment</li>
+                        <li>De passage sur le projet</li>
+                        <li>Améliorer le produit</li>
+                        <li>Propose des contributions</li>
+                    </ul>
+                    <ul>
+                        <li><img src="img/elise.png" /></li>
+                        <li>Elise</li>
+                        <li style="font-weight: bold">Mainteneur.se</li>
+                        <li>N'as pas beaucoup de temps</li>
+                        <li>Passe régulièrement sur le projet</li>
+                        <li>Accompagner les contributeurs</li>
+                        <li>Resoudre les bugs urgent rapidement</li>
+                        <li>Vérifier/Valider les contributions</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>OpenSource Flow</h1>
+                    <div style="display: flex;flex-direction: column;">
+                        <dl>
+                            <dt>Benjamin (Contributeur)</dt>
+                            <dd>Hey, la feature XXX m'intéresse bien, je peux m'en occuper ?</dd>
+                        </dl>
+
+                        <dl>
+                            <dt>Elise (Mainteneur)</dt>
+                            <dd>Ouai, c'est bon vas y.</dd>
+                        </dl>
+                        <dl>
+                            <dt>Benjamin (Contributeur)</dt>
+                            <dd>Tiens je t'ai fait une PR tu peux me la valider</dd>
+                        </dl>
+                        <dl>
+                            <dt>Elise (Mainteneur)</dt>
+                            <dd>Le code est pas mal mais ta documentation c'est pas ouf, tu me re-travaille ça</dd>
+                        </dl>
+                        <dl>
+                            <dt>Benjamin (Contributeur)</dt>
+                            <dd>Yep, je t'ai fait une nouvelle version.</dd>
+                        </dl>
+                        <dl>
+                            <dt>Elise (Mainteneur)</dt>
+                            <dd>C'est nickel, je valide, bon travail 🙂</dd>
+                        </dl>
+                        <dl>
+                            <dt>Robot</dt>
+                            <dd>*Les commits ont été ajouté au dépot*</dd>
+                        </dl>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <h1>Authentification Github</h1>
+
+                <ol>
+                    <li><a
+                            href="https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Créer
+                            une clée SSH</a></li>
+                    <li><a
+                            href="https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Ajouter
+                            la clée publique à GitHub</a></li>
+                </ol>
+            </section>
+            <section>
+                <section>
+                    <h1>Pour Elise (mainteuneur)</h1>
+                </section>
+                <section>
+                    <ol>
+                        <li>Créer un dépôt Github</li>
+                        <li>Pousser notre historique local</li>
+                        <li>Créer une issue</li>
+                    </ol>
+                </section>
+                <section>
+                    <h1>git remote add origin url</h1>
+                    <ul>
+                        <li><b>origin</b> convention</li>
+                        <li>Ajoute la section [remote "origin"] dans <b>.git/config</b></li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>git push -u origin main</h1>
+                    <ul>
+                        <li>Ajoute la section [branch "main"] dans <b>.git/config</b></li>
+                        <li>Crée une branche dans <b>.git/refs/remotes/origin/main</b></li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Pour Benjamin (contributeur)</h1>
+                </section>
+                <section>
+                    <h1>Dupliquer le depot git sur son espace personnel</h1>
+                    <ol>
+                        <li>On se connecte sur <a href="https://github.com/">Github</a></li>
+                        <li>On recherche le dépot sur lequel on veut contribuer</li>
+                        <li>On appuie sur <img src="img/fork.PNG" /></li>
+                    </ol>
+                </section>
+                <section>
+                    <h1>Créer une PR</h1>
+                    <ol>
+                        <li>Créer une branche</li>
+                        <li>Pousser les modifications</li>
+                        <li>Faire une PR</li>
+                        <li>Associé la PR à notre issue</li>
+                        <li>Vérifier que l'issue est fermée</li>
+                    </ol>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Pour Elise (mainteuneur)</h1>
+                </section>
+                <section>
+                    <h1>Valider la PR</h1>
+
+                    <ol>
+                        <li>Valider la PR</li>
+                        <li>Vérifier que l'issue est fermée</li>
+                        <li>Vérifier l'historique du projet</li>
+                    </ol>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Gestion des conflits</h1>
+
+                    <ol>
+                        <li>Sync depuis GitHub</li>
+                        <li>git switch main</li>
+                    </ol>
+                </section>
+                <section>
+                    <h1>git pull</h1>
+
+                    <ol>
+                        <li>git fetch</li>
+                        <li>git merge origin/main</li>
+                    </ol>
+                </section>
+                <section>
+                    <ol>
+                        <li>git rebase main branch_name</li>
+                        <li>git switch branch_name</li>
+                    </ol>
+                </section>
+                <section>
+                    <h1>git push -f</h1>
+
+                    <ol>
+                        <li>-f : force</li>
+                    </ol>
+                </section>
+            </section>
+            <section>
+                <h1>Extensions Github</h1>
+
+                <ul>
+                    <li><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.remotehub">Cloner depuis
+                            VSCode</a></li>
+                    <li><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github">Valider
+                            les PR depuis VSCode</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <script type="module">
+        import Reveal from './node_modules/reveal.js/dist/reveal.esm.js'
+        import RevealNotes from "./node_modules/reveal.js/plugin/notes/notes.esm.js"
+        import RevealHighlight from "./node_modules/reveal.js/plugin/highlight/highlight.esm.js"
+
+        Reveal.initialize({
+            hash: true,
+            navigationMode: "linear",
+            width: 1920,
+            height: 1080,
+            plugins: [RevealNotes, RevealHighlight],
+        });
+    </script>
+
+</html>

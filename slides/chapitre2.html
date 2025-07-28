@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/white.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/plugin/highlight/monokai.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -45,28 +46,29 @@
                 </p>
             </section>
             <section>
-                <section data-auto-animate>
-                    <ul>
+                <section>
+                    <ul style="list-style-type: none;text-align: center;">
                         <li><img src="img/benjamin.png" width="202px" heigth="186px" /></li>
                         <li>Benjamin</li>
-                        <li style="font-weight: bold">Contributeur.ice</li>
-                        <li>A du temps en ce moment</li>
+                        <li style="font-weight: bold;margin-bottom: 50px;">Contributeur</li>
                         <li>De passage sur le projet</li>
+                        <li style="margin-bottom: 50px;">A du temps en ce moment</li>
                         <li>Améliorer le produit</li>
                         <li>Propose des contributions</li>
                     </ul>
-                    <ul>
+                </section>
+                <section>
+                    <ul style="list-style-type: none;text-align: center;">
                         <li><img src="img/elise.png" /></li>
                         <li>Elise</li>
-                        <li style="font-weight: bold">Mainteneur.se</li>
-                        <li>N'as pas beaucoup de temps</li>
+                        <li style="font-weight: bold;margin-bottom: 50px;">Mainteneur</li>
                         <li>Passe régulièrement sur le projet</li>
+                        <li style="margin-bottom: 50px;">N'as pas beaucoup de temps</li>
                         <li>Accompagner les contributeurs</li>
-                        <li>Resoudre les bugs urgent rapidement</li>
                         <li>Vérifier/Valider les contributions</li>
                     </ul>
                 </section>
-                <section>
+                <section data-auto-animate>
                     <h1>OpenSource Flow</h1>
                     <div style="display: flex;flex-direction: column;">
                         <dl>
@@ -78,6 +80,11 @@
                             <dt>Elise (Mainteneur)</dt>
                             <dd>Ouai, c'est bon vas y.</dd>
                         </dl>
+                    </div>
+                </section>
+                <section data-auto-animate>
+                    <h1>OpenSource Flow</h1>
+                    <div style="display: flex;flex-direction: column;">
                         <dl>
                             <dt>Benjamin (Contributeur)</dt>
                             <dd>Tiens je t'ai fait une PR tu peux me la valider</dd>
@@ -86,9 +93,14 @@
                             <dt>Elise (Mainteneur)</dt>
                             <dd>Le code est pas mal mais ta documentation c'est pas ouf, tu me re-travaille ça</dd>
                         </dl>
+                    </div>
+                </section>
+                <section data-auto-animate>
+                    <h1>OpenSource Flow</h1>
+                    <div style="display: flex;flex-direction: column;">
                         <dl>
                             <dt>Benjamin (Contributeur)</dt>
-                            <dd>Yep, je t'ai fait une nouvelle version.</dd>
+                            <dd>Je t'ai fait une nouvelle version.</dd>
                         </dl>
                         <dl>
                             <dt>Elise (Mainteneur)</dt>
@@ -117,6 +129,7 @@
             <section>
                 <section>
                     <h1>Pour Elise (mainteuneur)</h1>
+                    <img src="img/elise.png" />
                 </section>
                 <section>
                     <ol>
@@ -126,14 +139,34 @@
                     </ol>
                 </section>
                 <section>
-                    <h1>git remote add origin url</h1>
+                    <h1>Ajouter le dépôt distant</h1>
+                    <pre data-id="code">
+                        <code data-trim class="language-powershell">
+                            git remote add origin "url"
+                        </code>
+                    </pre>
+
                     <ul>
                         <li><b>origin</b> convention</li>
                         <li>Ajoute la section [remote "origin"] dans <b>.git/config</b></li>
                     </ul>
                 </section>
                 <section>
-                    <h1>git push -u origin main</h1>
+                    <h1>Renome la branche en "main"</h1>
+                    <pre data-id="code">
+                        <code data-trim class="language-powershell">
+                            git branch -M main
+                        </code>
+                    </pre>
+
+                </section>
+                <section>
+                    <h1>Envoyer les commits sur le dépôt</h1>
+                    <pre data-id="code">
+                        <code data-trim class="language-powershell">
+                            git push -u origin main
+                        </code>
+                    </pre>
                     <ul>
                         <li>Ajoute la section [branch "main"] dans <b>.git/config</b></li>
                         <li>Crée une branche dans <b>.git/refs/remotes/origin/main</b></li>
@@ -143,6 +176,7 @@
             <section>
                 <section>
                     <h1>Pour Benjamin (contributeur)</h1>
+                    <img src="img/benjamin.png" width="202px" heigth="186px" />
                 </section>
                 <section>
                     <h1>Dupliquer le depot git sur son espace personnel</h1>
@@ -158,14 +192,15 @@
                         <li>Créer une branche</li>
                         <li>Pousser les modifications</li>
                         <li>Faire une PR</li>
+                        <li>Mettre à jour la PR</li>
                         <li>Associé la PR à notre issue</li>
-                        <li>Vérifier que l'issue est fermée</li>
                     </ol>
                 </section>
             </section>
             <section>
                 <section>
                     <h1>Pour Elise (mainteuneur)</h1>
+                    <img src="img/elise.png" />
                 </section>
                 <section>
                     <h1>Valider la PR</h1>
@@ -181,31 +216,54 @@
                 <section>
                     <h1>Gestion des conflits</h1>
 
-                    <ol>
-                        <li>Sync depuis GitHub</li>
-                        <li>git switch main</li>
-                    </ol>
+                    <img src="img/sync-fork.png">
                 </section>
                 <section>
-                    <h1>git pull</h1>
+                    <h1>On va sur la branche principal</h1>
+
+                    <pre data-id="code">
+                        <code data-trim class="language-powershell">
+                            git switch main
+                        </code>
+                    </pre>
+                    
+                </section>
+                <section>
+                    <h1>On récupère les modifications</h1>
+
+                    <pre data-id="code">
+                        <code data-trim class="language-powershell">
+                            git pull
+                        </code>
+                    </pre>
 
                     <ol>
-                        <li>git fetch</li>
-                        <li>git merge origin/main</li>
+                        <li>fetch: récupére les nouveau commit du dépot sur refs/remotes/origin/main</li>
+                        <li>merge sur notre branche principale (main)</li>
                     </ol>
                 </section>
                 <section>
-                    <ol>
-                        <li>git rebase main branch_name</li>
-                        <li>git switch branch_name</li>
-                    </ol>
+                    <h1>On rebase notre branche feature</h1>
+                    <pre data-id="code">
+                        <code data-trim class="language-powershell">
+                            git switch branch_name
+                            git rebase main branch_name
+                        </code>
+                    </pre>
                 </section>
                 <section>
-                    <h1>git push -f</h1>
-
-                    <ol>
-                        <li>-f : force</li>
-                    </ol>
+                    <h1>On pousse notre branche feature</h1>
+                    
+                    <pre data-id="code">
+                        <code data-trim class="language-powershell">
+                            git push -f
+                        </code>
+                    </pre>
+                    
+                    <dl>
+                        <dt>-f</dt>
+                        <dd>force</dd>
+                    </dl>
                 </section>
             </section>
             <section>

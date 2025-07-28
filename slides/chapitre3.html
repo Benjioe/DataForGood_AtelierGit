@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/white.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/plugin/highlight/monokai.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,40 +12,68 @@
         <div class="slides">
             <section>
                 <section>
-                    <section>
-                        <h1>Rechercher dans l'historique</h1>
-                    </section>
-                    <section>
-                        git log --oneline --author "author name" -- 'file path"
-	-S "chaine a rechercher"
-	-G 'regex'
- -p
-git log --name-only
-                        git log --oneline HEAD..origin
-                    </section>
-                    <section>
-                        <h1>git bisect</h1>
+                    <h1>Réecrire l'historique</h1>
+                </section>
 
-                        git bisect start HEAD [good commit id]
- git bisect run dotnet test --filter "nom du test"
- git bisect reset
+                <section>
+                    <h1>Modifier le dernier commit</h1>
 
-                    </section>
+                    <pre>
+                        <code data-trim class="language-powershell">
+                            git commit --amend
+                        </code>
+                    </pre>
                 </section>
                 <section>
-                    <section>
-                        <h1>Réecrire l'historique</h1>
-                    </section>
+                    <h1>Modifier un commit plus lointain</h1>
+                    <pre>
+                        <code data-trim class="language-powershell">
+                            git commit --fixup "hash"
+                        </code>
+                    </pre>
 
-                    <section>
-                        <h1>git commit --amend</h1>
-                    </section>
-                    <section>
-                        <h1>git rebase</h1>
+                    <pre>
+                        <code data-trim class="language-powershell">
+                            git rebase -i "hash du parent"
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h1>Annuler le dernier commit</h1>
 
-                        git commit --fixup
-                        git rebase -i HEAD~
-                    </section>
+                    <pre>
+                        <code data-trim class="language-powershell">
+                            git reset HEAD^
+                        </code>
+                    </pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Rechercher dans l'historique</h1>
+
+                    <pre>
+                        <code data-trim class="language-powershell">
+                            git log -S "chaine a rechercher" -- "file path"
+                        </code>
+                    </pre>
+
+                    <pre>
+                        <code data-trim class="language-powershell">
+                            git log -G "regex" -- "file path"
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h1>Rechercher dans l'historique</h1>
+
+                    <pre>
+                        <code data-trim class="language-powershell">
+                            git bisect start HEAD "good commit id"
+                            git bisect run dotnet test --filter "nom du test"
+                            git bisect reset
+                        </code>
+                    </pre>
                 </section>
             </section>
             <section>
@@ -62,13 +91,14 @@ git log --name-only
     <script type="module">
         import Reveal from './node_modules/reveal.js/dist/reveal.esm.js'
         import RevealNotes from "./node_modules/reveal.js/plugin/notes/notes.esm.js"
+        import RevealHighlight from "./node_modules/reveal.js/plugin/highlight/highlight.esm.js"
 
         Reveal.initialize({
             hash: true,
             navigationMode: "linear",
             width: 1920,
             height: 1080,
-            plugins: [RevealNotes],
+            plugins: [RevealNotes, RevealHighlight],
         });
     </script>
 

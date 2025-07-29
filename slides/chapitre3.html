@@ -77,6 +77,25 @@
                 </section>
             </section>
             <section>
+                <h1>Reprendre une branche manuellement</h1>
+                
+                <h3>Créer une nouvelle branche depuis le commit</h3>
+                <pre>
+                    <code data-trim class="language-powershell">
+                        git branch branch_name "hash"
+                        git switch branch_name
+                    </code>
+                </pre>
+
+
+                <h3>Pour chaque commit</h3>
+                <pre>
+                    <code data-trim class="language-powershell">
+                        git cherry-pick "hash"
+                    </code>
+                </pre>
+            </section>
+            <section>
                 <h1>Sommaire</h1>
 
                 <ol>

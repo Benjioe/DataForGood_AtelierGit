@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/white.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Rappel chapitre 1</h1>
+            </section>
+            <section>
+                <h1>Permet de gérer un historique</h1>
+
+                <h3>1. Séléctionne des modifications</h3>
+                <pre><code class="language-powershell">git add "nom/chemin du fichier"</code></pre>
+
+                <h3>2. Commit<< /h3>
+                        <pre><code class="language-powershell">git commit -m "message"</code></pre>
+
+                        <h3>Afficher l'historique</h3>
+                        <pre><code class="language-powershell">git log</code></pre>
+            </section>
+            <section>
+                <h1>utiliser les branches</h1>
+
+                <pre>
+                    <code data-trim class="language-powershell">
+                        git branch nom_branch
+                    </code>
+                </pre>
+                <pre>
+                    <code data-trim class="language-powershell">
+                        git switch nom_branch
+                    </code>
+                </pre>
+            </section>
+
+            <section>
+                <h1>Merge</h1>
+
+                <h3>1. On récupère les nouveauté de master</h3>
+                <pre>
+                    <code data-trim class="language-powershell">
+                        git rebase master nom_branch
+                    </code>
+                </pre>
+                <h3>2. On merge (fast forward)</h3>
+                <pre>
+                    <code data-trim class="language-powershell">
+                        git switch master
+                        git merge nom_branch
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h1>Sommaire</h1>
+
+                <ol>
+                    <li>Créer un historique local</li>
+                    <li><a href="chapitre2.html">Travailler à plusieurs avec GitHub</a></li>
+                    <li><a href="chapitre3.html">Utiliser la puissance de GIT</a></li>
+                    <li><a href="fin.html">Pour aller plus loin</a></li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <script type="module">
+        import Reveal from './node_modules/reveal.js/dist/reveal.esm.js'
+
+        Reveal.initialize({
+            hash: true,
+            navigationMode: "linear",
+            width: 1920,
+            height: 1080,
+        });
+    </script>
+
+</html>

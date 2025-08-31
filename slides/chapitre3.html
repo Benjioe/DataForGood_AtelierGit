@@ -69,8 +69,10 @@
 
                     <pre>
                         <code data-trim class="language-powershell">
-                            git bisect start HEAD "good commit id"
-                            git bisect run dotnet test --filter "nom du test"
+                            git bisect start
+                            git bisect bad
+                            git bisect good [ID commit]
+                            git bisect run python 'chemin complet unittest_to_git_bisect.py' 'test.TestIsWorking.should_return_true'
                             git bisect reset
                         </code>
                     </pre>

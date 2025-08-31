@@ -15,6 +15,8 @@
             <section>
                 <h1>Permet de gérer un historique</h1>
 
+                <h2>Métaphore: un classeur</h2>
+
                 <h3>1. Séléctionne des modifications</h3>
                 <pre><code class="language-powershell">git add "nom/chemin du fichier"</code></pre>
 
@@ -26,6 +28,9 @@
             </section>
             <section>
                 <h1>utiliser les branches</h1>
+                <h2>Métaphore: une pochette</h2>
+
+                <img src="img/git_branch.png" />
 
                 <pre>
                     <code data-trim class="language-powershell">
@@ -41,14 +46,17 @@
 
             <section>
                 <h1>Merge</h1>
+                <h2>Métaphore: ajoute la pochette au classeur</h2>
 
                 <h3>1. On récupère les nouveauté de master</h3>
+                <img src="img/branch-rebase.png" />
                 <pre>
                     <code data-trim class="language-powershell">
                         git rebase master nom_branch
                     </code>
                 </pre>
                 <h3>2. On merge (fast forward)</h3>
+                <img src="img/branch-merge.png" />
                 <pre>
                     <code data-trim class="language-powershell">
                         git switch master

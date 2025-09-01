@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/white.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/plugin/highlight/monokai.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,7 +16,6 @@
             <section>
                 <h1>Permet de gérer un historique</h1>
 
-                <h2>Métaphore: un classeur</h2>
 
                 <h3>1. Séléctionne des modifications</h3>
                 <pre><code class="language-powershell">git add "nom/chemin du fichier"</code></pre>
@@ -25,6 +25,9 @@
 
                         <h3>Afficher l'historique</h3>
                         <pre><code class="language-powershell">git log</code></pre>
+            </section>
+            <section>
+                <h1>Métaphore: Classeur</h1>
             </section>
             <section>
                 <h1>utiliser les branches</h1>
@@ -78,12 +81,15 @@
     </div>
     <script type="module">
         import Reveal from './node_modules/reveal.js/dist/reveal.esm.js'
+        
+        import RevealHighlight from "./node_modules/reveal.js/plugin/highlight/highlight.esm.js"
 
         Reveal.initialize({
             hash: true,
             navigationMode: "linear",
             width: 1920,
             height: 1080,
+            plugins: [RevealHighlight],
         });
     </script>
 
